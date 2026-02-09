@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Forms</h1>
+    <form action="" oninput="result.value= Number(a.value)+Number(b.value)">
+    <label for=" ">Enter Username:</label>
+    <input type="text" id="uname" name="unamefield" size="40" maxlength="8" placeholder="Enter Username">
+    <br><br>
+    <label for="">Enter Password:</label>
+    <input type="password" id="pswd" name="passwordfield" autofocus>
+    <br><br>
+    <label for="">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <p>Course: </p>
+    <input list="Courses">
+    <datalist id="course">
+        <option value="B.tech"></option>
+        <option value="BCA"></option>
+        <option value="MCA"></option>
+    </datalist>
+    <p>Select Course:</p>
+    <input type="radio" name="course" id="MCA" value="MCA" checked>
+    <label for="MCA">MCA</label> <br>
+    <input type="radio" name="course" id="BCA" value="MCA">
+    <label for="BCA">BCA</label> <br>
+    <input type="radio" name="course" id="Btech" value="Btech">
+    <label for="Btech">Btech</label><br>
+    <br> 
+    <input type="date" name="date" id="date"><br><br>
+    <input type="time" name="time" id="name"><br><br>  
+    <input type="color" name="color" id="color"><br><br>
+    <input type="range" name="range" id="range" min="0" max="20"><br><br>
+
+    <p>Search: </p>
+    <input type="search" name="search" id="search">
+    <br><br>
+
+    <p>Telephone Number: </p>
+    <input type="tel" name="telbox" id="telbox">
+    <br><br>
+    
+    <p>Enter URL: </p>
+    <input type="url" name="urlbox" id="urlbox">
+    <br><br>
+
+    <p>Enter Number: </p>
+    <input type="number" name="numbox" id="numbox" min="1" max="20" step="3">
+    
+
+    <input list="Courses">
+    <datalist id="course" name="coursebox" id="coursebox"></datalist>
+
+    <p>Hobbies:</p>
+    <input type="checkbox" name="singing" id="singing" value="singing">
+    <label for="singing">Singing</label><br>
+    <input type="checkbox" name="dancing" id="dancing" value="dancing">
+    <label for="dancing">Dancing</label><br>
+    <input type="checkbox" name="reading" id="reading" value="reading">
+    <label for="reading">Reading</label><br>
+
+    <p>Choose state: </p>
+    <select name="state" id="state"  size="3" multiple>
+        <option value="Punjab" selected>Punjab</option>
+        <option value="Himachal">Himachal Pradesh</option>
+        <option value="Kerala">Kerala</option> 
+        <option value="Bihar">Bihar</option>
+    </select>
+
+    <p>Addition of 2 num: </p>
+    <input type="number" name="a" id="a" value="0">
+    +
+    <input type="number" name="b" id="b" value="0">
+    =
+    <input type="number" id="result" readonly>
+
+    <p>Choose File: </p>
+    <input type="file" name="filebox" id="filebox" accept="application/pdf">
+    <br><br>
+    <input type="submit" name="submitbtn" id="submitbtn">
+    <input type="reset" name="reset" id="reset">
+
+
+    </form>
+</body>
+</html>

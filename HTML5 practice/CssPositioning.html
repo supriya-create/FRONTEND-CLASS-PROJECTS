@@ -1,0 +1,64 @@
+<!-- Positions-static(by default),absolute,sticky,fixed,realtive -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <style>
+    #body{
+        margin: 0px;
+    }
+    #rel{
+        border: 3px solid blue;
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+    #abs1{
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+    }
+    /* #abs2{
+        position: absolute;
+        right: 40px;
+        top: 40px;
+    } */
+     #div1{
+        background-color: aquamarine;
+        height: 100vh; 
+        width: 100%;
+        
+     }
+     #div2{
+        background-color: brown;
+        position: sticky;
+        width: 100%;
+        
+     }
+     #div3{
+        background-color: darkcyan;
+        height: 100vh;
+        width: 100%;
+     }
+     #div4{
+        background-color: darkkhaki;
+        height: 100vh;
+        width: 100%;
+     }
+ </style>
+ <body>
+    <div id="rel">
+        <div id="abs1">Absolute1</div>
+        <!-- <div id="abs2">Absolute2</div> -->
+    </div>
+
+    <div id="div1">Div1</div>
+    <div id="div2">Div2</div>
+    <div id="div3">Div3</div>
+    <div id="div4">Div4</div>
+
+ </body>
+ </html>

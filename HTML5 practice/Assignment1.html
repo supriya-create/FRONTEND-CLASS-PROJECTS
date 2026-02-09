@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: rgb(110, 158, 180);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1e293b;
+}
+
+.nav-inner {
+    height: 60px;
+    display: grid;
+    place-items: center;
+}
+
+.nav-menu {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 80px auto 0; 
+    background: rgb(189, 207, 216);
+    padding: 15px;
+    display: grid;
+    gap: 15px;
+    border: 2px solid black;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.image-box {
+    height: 190px;
+    border: 2px solid black;;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video {
+    border: 2px solid black;
+    overflow: hidden;      
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.box {
+    height: 80px;
+    border: 2px solid black;
+    display: grid;
+    place-items: center;
+}
+
+.footer {
+    height: 60px;
+    border: 2px solid black;
+    display: grid;
+    place-items: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="nav-inner">
+        <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="images">
+        <div class="image-box"><img src="img1.jpeg"></div>
+        <div class="image-box"><img src="img2.jpeg"></div>
+        <div class="image-box"><img src="img3.jpeg"></div>
+    </div>
+    <div class="video">
+    <video controls>
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="info">
+    <div class="box">
+    <h3>Address</h3>
+    <p>Green Valley Residency<br>Sector 21, New Town<br></p>
+</div>
+    <div class="box">
+    <h3>Important Notes</h3>
+    <ul>
+        <li>All photos are original</li>
+        <li>Videos shot in HD quality</li>
+    </ul>
+</div></div>
+
+    <div class="footer">
+    <a href="#">Gallery</a>
+    <a href="#">Videos</a>
+    <a href="#">Credits</a>
+</div></div>
+
+</body>
+</html>
