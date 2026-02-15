@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Arithmetic Operators</h1>");
+        var a = 20;
+        var b = 10;
+        
+        document.write("Power is: "+ (a**2)+ "<br>");
+        document.write("Remainder is: "+(a%b)+"<br>");
+        document.write("Sum is: "+(a+b)+"<br>");
+        document.write("Subtraction is: "+(a-b)+"<br>");
+        document.write("Multiplication is: "+(a*b)+"<br>");
+        document.write("Division is: "+(a/b)+"<br>");
+
+        document.write("<h1>Assignment Operators</h1>");
+        var c = 10;
+        var d = 5;
+        document.write("sum is: "+ (c+=d)+ "<br>");
+        document.write("multiplication is: "+ (c*=d)+ "<br>");
+        document.write("division is: "+ (c/=d)+ "<br>");
+        document.write("difference is: "+ (c-=d)+ "<br>");
+        document.write("division is: "+ (c/=d)+ "<br>");
+
+        //Comparison Operator
+        let m = 2; 
+        let n = "2";
+        console.log(m==n);
+        console.log(m===n);
+        console.log(m<n);
+        console.log(m>n);
+        console.log(m<=n);
+        console.log(m>=n);
+
+        //Logical Operator  
+        let x = 10;
+        let y =20;
+        let isGood = false;
+        console.log(x>5 && y>5);
+        console.log(x>90 || y>2);
+        console.log(!isGood);
+
+        //Ternary Operator
+        let age = 18;
+        let result = (age>=18) ? "Adult" : "Minor";
+        console.log(result);
+
+    </script>
+</body>
+</html>
