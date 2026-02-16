@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let laptop = {
+            brand:"Apple",
+            color:"Grey",
+            ram:"18gb",
+            laptopintro: function(){
+            console.log("I have "+this.brand+" laptop of "+this.color+
+            " color and its RAM is "+this.ram);
+            }
+        }
+        console.log(laptop);
+        console.log(laptop.brand);
+        console.log(laptop["color"]);
+        laptop.laptopintro();
+
+        // console.log(`I have ${laptop.brand} laptop of ${laptop.color} color and its RAM is ${laptop.ram}`);
+
+        //Object Constructor
+
+        let student = new Object();
+        student.name = "Supriya";
+        student.marks = 19;
+        console.log(student["name"]);
+
+        function laptop1(color1, brand1){
+            this.color1 = color1;
+            this.brand1 = brand1;
+        }
+
+        let device1 = new laptop1("black" , "HP");
+        let device2 = new laptop1("Red", "Lenovo");
+        console.log(device1.color1, device1.brand1);
+        console.log(device2.color1, device2.brand1);
+
+        function avg(a,b,c){
+            return (a+b+c)/3;
+        }
+        document.write(avg(4,8,6));
+
+
+    </script>
+</body>
+</html>
