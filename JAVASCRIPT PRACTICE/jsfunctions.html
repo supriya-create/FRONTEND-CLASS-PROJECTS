@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function basicinfo(){
+            console.log("Frontend");
+        }
+        basicinfo();
+
+
+        console.log(avg(2,4,6)); //hoisting allowed for functions
+        function avg(a, b, c){
+            var d = (a+b+c)/3;
+            // console.log(d);
+            return d;
+        }
+        // console.log(avg(2,4,6));
+
+        //hoisting is not allowed in arrow function but allowed in normal functions.
+        //if we uses {} it means we can write multiple lines so we have to write return always with
+        // {} - explicit return
+        //no need of return and {} for one line code - implicit return
+
+        //explicit return
+        const sum = (a, b, c) => {
+            console.log(a+b+c);
+        }
+        sum(4,5,9);
+
+        //implicit return
+        const average = (a,b,c) => (a+b+c)/3;  
+        console.log(average(2,4,6));
+
+
+        const square = a => (a*a);  // for single parameter we can skip ()
+        console.log(square(4));
+
+    
+    </script>
+</body>
+</html>
