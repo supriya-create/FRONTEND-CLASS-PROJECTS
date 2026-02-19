@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1)onClick   2)onceontextmenu(right click)    3)ondblclick-->
+    <!-- 6)onmousedown   7)onmouseeneter                  8)onmouseleave
+         9)onmousemove (count will inc)  
+         10)onmouseup  (on releasing)
+         11)onmouseover.                
+            both parent and child       onmouseenter- parent 
+            leave - parent               out- both parent and child
+         -->
+    
+
+    <div style="background-color: aqua; width: 500px; height: 500px;" onmouseover="">
+        <img src="/HTML5 practice/img2.jpeg" alt="" width="300"  style="border: 2px solid brown;" 
+    onmouseleave="countfunc()">
+    <p id="para">Image</p>
+    </div>
+<script>
+    function generateAlert(){
+        alert("You clicked on an image");
+    }
+    let c =0;
+    function countfunc(){
+        c+=1;
+        document.getElementById("para").innerHTML=c;
+    }
+</script>    
+</body>
+</html>
