@@ -7,8 +7,25 @@
 </head>
 <body>
     <script>
-        let numbers = [1,2,3,4,5];
-        
+        let arr1 = [1,2,3,4,5];
+        let arr2 = [6,7,8,9];
+        console.log(arr1);
+
+        //push element
+        arr1.push(10);  
+        console.log(arr1);
+
+        //concatinate two array
+        console.log(arr1.concat(arr2));
+
+        //Every method checks if all elements in an array pass a given test .It returns true if all 
+        // elements pass the test otherwise false.
+
+        let arr3 = [2,4,6,8];
+        console.log(arr3.every(n=>n%2==0));
+
+        //filter - element passing test will be filter out from array and create a new array
+        console.log(arr2.filter(n=>n%2==0));
     </script>
 </body>
 </html>
