@@ -26,6 +26,20 @@
 
         //filter - element passing test will be filter out from array and create a new array
         console.log(arr2.filter(n=>n%2==0));
+
+        //find - it will print only 1st value that will pass the condition
+        console.log(arr1.find(n=>n%2==0));
+
+        //for each - show output one after another
+        arr1.forEach(n=>{
+            console.log(n*2);
+        })
+
+        //map - output in the form of array
+        console.log(arr1.map(n=>n*2));
+
+        //indexOf
+        console.log(arr1.indexOf(3));
     </script>
 </body>
 </html>
