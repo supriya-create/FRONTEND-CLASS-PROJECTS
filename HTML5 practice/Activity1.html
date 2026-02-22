@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TechVerse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color:#f5f6f8;
+        }
+
+        
+        .navbar{
+            background-color:#0b1b33;
+            padding:20px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            margin-left:30px;
+            font-size:15px;
+        }
+
+        
+        .hero{
+            background-color:#dbe6f2;
+            text-align:center;
+            padding:80px 20px;
+        }
+
+        .hero h1{
+            font-size:36px;
+            color:#2d2d2d;
+        }
+
+        .hero p{
+            margin-top:20px;
+            font-size:16px;
+            color:#555;
+        }
+
+        .buttons{
+            margin-top:30px;
+        }
+
+        .btn-primary{
+            background-color:#4a63f1;
+            color:white;
+            border:none;
+            padding:12px 30px;
+            border-radius:5px;
+            font-size:14px;
+            cursor:pointer;
+        }
+
+        .btn-outline{
+            background-color:transparent;
+            color:#4a63f1;
+            border:1px solid #4a63f1;
+            padding:12px 30px;
+            border-radius:5px;
+            font-size:14px;
+            margin-left:15px;
+            cursor:pointer;
+        }
+
+        
+        .why{
+            padding:60px 80px;
+            text-align:center;
+        }
+
+        .why h2{
+            margin-bottom:40px;
+            font-size:22px;
+            color:#333;
+        }
+
+        .card-container{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background:white;
+            width:300px;
+            padding:25px;
+            border-radius:8px;
+            border:1px solid #e0e0e0;
+            text-align:left;
+        }
+
+        .card h3{
+            font-size:16px;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            font-size:14px;
+            color:#555;
+        }
+
+        
+        .stats{
+            background-color:#0b1b33;
+            padding:50px 0;
+            display:flex;
+            justify-content:space-around;
+            text-align:center;
+            color:white;
+        }
+
+        .stats h2{
+            font-size:28px;
+        }
+
+        .stats p{
+            margin-top:10px;
+            font-size:14px;
+        }
+
+        
+        .testimonials{
+            padding:60px 80px;
+            text-align:center;
+        }
+
+        .testimonials h2{
+            margin-bottom:40px;
+            font-size:20px;
+            color:#333;
+        }
+
+        .testimonial-container{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            flex-wrap:wrap;
+        }
+
+        .testimonial{
+            background:#f8f8f8;
+            width:400px;
+            padding:25px;
+            border-radius:8px;
+            text-align:left;
+        }
+
+        .testimonial p{
+            font-size:14px;
+            color:#555;
+        }
+
+        .author{
+            margin-top:15px;
+            font-size:13px;
+            font-weight:bold;
+        }
+
+        
+        .footer{
+            background-color:#071222;
+            padding:20px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            color:white;
+            font-size:14px;
+        }
+
+        .footer a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="navbar">
+        <div class="logo">TechVerse</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">Community</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    
+    <div class="hero">
+        <h1>Learn Skills That Shape Your Future</h1>
+        <p>
+            Master modern technologies with hands-on learning, expert guidance, and real-<br>
+            world projects.
+        </p>
+
+        <div class="buttons">
+            <button class="btn-primary">Get Started</button>
+            <button class="btn-outline">Explore Courses</button>
+        </div>
+    </div>
+
+   
+    <div class="why">
+        <h2>Why Choose TechVerse?</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Structured Learning</h3>
+                <p>Well-designed curriculum focusing on fundamentals and practical skills.</p>
+            </div>
+
+            <div class="card">
+                <h3>Hands-On Projects</h3>
+                <p>Build real-world projects to strengthen concepts and confidence.</p>
+            </div>
+
+            <div class="card">
+                <h3>Career Growth</h3>
+                <p>Develop industry-ready skills that employers actually look for.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="stats">
+        <div>
+            <h2>10K+</h2>
+            <p>Students</p>
+        </div>
+
+        <div>
+            <h2>120+</h2>
+            <p>Courses</p>
+        </div>
+
+        <div>
+            <h2>95%</h2>
+            <p>Satisfaction</p>
+        </div>
+    </div>
+
+    
+    <div class="testimonials">
+        <h2>What Learners Say</h2>
+
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>“The courses are well structured and easy to follow.”</p>
+                <div class="author">— Ananya Sharma</div>
+            </div>
+
+            <div class="testimonial">
+                <p>“Perfect platform to strengthen HTML & CSS fundamentals.”</p>
+                <div class="author">— Rahul Verma</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <div>© 2026 TechVerse. All Rights Reserved.</div>
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+
+</body>
+</html>
