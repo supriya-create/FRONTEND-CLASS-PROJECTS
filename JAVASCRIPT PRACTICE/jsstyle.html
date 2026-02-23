@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .myclass{
+            color: blue;
+            background-color: rgb(185, 149, 105);
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">This is front end class</p>
+    <button id="btn1" onclick="changeStyle()">Change Style</button>
+    
+    <p id="p2">This is class style</p>
+    <button id="btn2" onclick="addClassStyle()">Add Class Style</button>
+    <button id="btn2" onclick="removeClassStyle()">Remove Class Style</button>
+    <button id="btn3" onclick="changeToggleStyle()"> Change toggle style</button>
+
+    <p id="p3">Event Listener</p>
+    <button id="btn4">Add EventListener</button>
+    <button id="btn5">Remove EventListener</button>
+
+   <script>
+    function changeStyle(){
+        let elt = document.getElementById("p1");
+        elt.style.color="yellow";
+        elt.style.backgroundColor="black";
+        elt.style.fontStyle="italic";
+        elt.style.textAlign="center";
+    }
+
+    function addClassStyle(){
+        document.getElementById("p2").classList.add("myclass");
+    }
+    function removeClassStyle(){
+        document.getElementById("p2").classList.remove("myclass");
+    }
+    function changeToggleStyle(){
+        document.getElementById("p2").classList.toggle("myclass");
+    }
+    function addEvent(){
+        document.getElementById("p3").innerHTML = Math.random();
+    }
+    function removeEvent(){
+        document.getElementById("btn4").removeEventListener("click", addEvent);
+    }
+    document.getElementById("btn4").addEventListener("click", addEvent);
+    document.getElementById("btn4").removeEventListener("click", addEvent);
+   </script>
+</body>
+
+</html>

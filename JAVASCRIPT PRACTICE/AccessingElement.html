@@ -15,22 +15,29 @@
     <p id="p3" class="para">Paragraph 3</p>
     <p id="p4" class="para">Paragraph 4</p>
 
-    <button onclick="changeText()">Submit</button>
+    <!-- <button onclick="changeText()">Submit</button> -->
 </body>
 <script>
 
-    function changeText(){
-    document.getElementById("p2").innerHTML="<h2>Front End</h2>";  //innerText - cant use html tags
-    }
+    // function changeText(){
+    // document.getElementById("p2").innerHTML="<h2>Front End</h2>";  //innerText - cant use html tags
+    // }
 
     // let elts = document.getElementsByClassName("para");
     // for(let i=0; i<elts.length; i++){
     //     elts[i].innerHTML="<h2> Change Class Element</h2>";
     // }
 
-    let elts = document.getElementsByTagName("p");
-    for(let i=0; i<elts.length; i++){
-        elts[i].innerHTML="<h2> Change Class Element</h2>";
+    // let elts = document.getElementsByTagName("p");
+    // for(let i=0; i<elts.length; i++){
+    //     elts[i].innerHTML="<h2> Change Class Element</h2>";
+    // }
+
+    document.querySelector("#p3").innerHTML="<h2>Selector</h2>";
+
+    let elements = document.querySelector(".para");
+    for(let i=0; i<elements.length; i++){
+        elements[i].innerHTML="<h2>Ok</h2>";
     }
 </script>
 </html>
