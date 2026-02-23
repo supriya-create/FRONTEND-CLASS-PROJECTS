@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ways to access elements 
+         1) by element id
+         2) by class name
+         3) by tag name -->
+    <p id="p1" class="para">Paragraph 1</p>
+    <p id="p2" class="para">Paragraph 2</p>
+    <p id="p3" class="para">Paragraph 3</p>
+    <p id="p4" class="para">Paragraph 4</p>
+
+    <button onclick="changeText()">Submit</button>
+</body>
+<script>
+
+    function changeText(){
+    document.getElementById("p2").innerHTML="<h2>Front End</h2>";  //innerText - cant use html tags
+    }
+
+    // let elts = document.getElementsByClassName("para");
+    // for(let i=0; i<elts.length; i++){
+    //     elts[i].innerHTML="<h2> Change Class Element</h2>";
+    // }
+
+    let elts = document.getElementsByTagName("p");
+    for(let i=0; i<elts.length; i++){
+        elts[i].innerHTML="<h2> Change Class Element</h2>";
+    }
+</script>
+</html>
