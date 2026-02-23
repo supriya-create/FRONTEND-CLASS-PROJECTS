@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 1)onClick   2)onceontextmenu(right click)    3)ondblclick-->
+    <!-- 1)onClick   2)oncontextmenu(right click)    3)ondblclick-->
     <!-- 6)onmousedown   7)onmouseeneter                  8)onmouseleave
          9)onmousemove (count will inc)  
          10)onmouseup  (on releasing)
@@ -21,6 +21,16 @@
     onmouseleave="countfunc()">
     <p id="para">Image</p>
     </div>
+
+     <!-- Keyboard event
+     1) onkeydown  - all keys including special keys
+     2) onkeypress - works for letters, digits etc. not for special keys
+     3) onkeyup - on releasing the key -->
+
+    <form action="">
+        <input type="text" id ="text1" onkeyup="generateAlert()">
+    </form>
+    
 <script>
     function generateAlert(){
         alert("You clicked on an image");
@@ -30,6 +40,8 @@
         c+=1;
         document.getElementById("para").innerHTML=c;
     }
+
+
 </script>    
 </body>
 </html>
