@@ -21,6 +21,7 @@
     onmouseleave="countfunc()">
     <p id="para">Image</p>
     </div>
+    <br><br>
 
      <!-- Keyboard event
      1) onkeydown  - all keys including special keys
@@ -28,10 +29,21 @@
      3) onkeyup - on releasing the key -->
 
     <form action="">
-        <input type="text" id ="text1" onkeyup="generateAlert()">
+        <input type="text" id ="text1" onsubmit="changeStyle()">
     </form>
+
+    <!-- Form Events
+     1) onfocus - on clicking 
+     2) onblur - when loose the focus
+     3) onchange - change and loose the focus
+     4) onselect - on typing and selecting 
+     5) onsubmit - on clicking submit btn
+     6) onreset  - on clicking reset btn -->
     
 <script>
+    function changeStyle(){
+        document.getElementById("text1").style.backgroundColor="red";
+    }
     function generateAlert(){
         alert("You clicked on an image");
     }
