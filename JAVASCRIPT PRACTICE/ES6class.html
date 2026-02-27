@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class person{
+            constructor(name, age){
+                this.name=name;
+                this.age=age;
+            }
+            func(){
+                return `The name of person is ${this.name} and age is ${this.age}`;
+            }
+        }
+        let p1 = new person("Raushan",24);
+        p1.func();
+
+        class Student extends person{
+            constructor(name,age,course,grade){
+                super(name,age);
+                this.course = course;
+                this.grade = grade;
+            }
+
+            studentinfo(){
+                return `${this.func()}. The course of student is ${this.course} and grade is ${this.grade}`;
+            }
+        }
+
+        let s1 = new Student("Aman",22,"Java","A");
+        console.log(s1.studentinfo());
+
+
+    </script>
+</body>
+</html>
