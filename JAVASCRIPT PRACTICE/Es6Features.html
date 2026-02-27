@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Destructuring of array
+
+        let arr1 = [1,3,5,7,"a","b"];
+        const [a,b,,d,e] = arr1;
+        console.log(a,b,d,e);
+
+        let arr2 = [10,20];
+        const [x,y,z=90] = arr2;//Assign default value during destructuring
+        console.log(x,y,z);
+
+
+        //Destructuring of Object
+
+        let student = {name:"Raj", age:20, course:"Java"};
+        const {name:name1,course:course1,age,state="Punjab"}= student;//Change the naming of property
+        console.log(name1,course1,state);
+
+        //Sread operator---Expands an iterable (like an array or string) into individual elements.
+
+        let array1 = [1,2,4,5];
+        let array2 = ["x","y",...array1];
+        console.log(array2);
+
+        let arr6=[10,20,30];
+        let arr7=[...arr6];
+        arr6.push(50);
+        console.log(arr6);
+        console.log(arr7);
+
+
+        //spread operator in function
+        function sum1(a,b,c){
+            return a+b+c;
+        }
+        let s = [1,2,3];
+        console.log(sum1(...s));
+
+        //spread operator with object
+
+        let laptop = {brand:"Dell" , color: "Silver"};
+        let laptop2 = {...laptop,ss:"14"};
+        console.log(laptop2);
+
+
+        //Rest Operator
+
+
+        function newfun(...num){
+            return num.map(n=>n*3);
+        }
+        console.log(newfun(1,2,5,6,7));
+
+        //Object destructuring with rest
+        let person = {name:"Harsh", age:80,state:"punjab"};
+        const {name,...newob} = person;
+        console.log(name);
+        console.log(newob);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
