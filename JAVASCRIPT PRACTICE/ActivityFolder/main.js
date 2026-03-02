@@ -1,9 +1,9 @@
 
-// import { average, avg, max } from "./logic.js";
+import { average, avg, max , bigger} from "./logic.js";
 // console.log(avg(1,2,3,4,5));
 // console.log(max([8,3,6,8,9]));
 
-import { average, bigger } from "./logic.js";
+// import { average, bigger } from "./logic.js";
 let student = {
     name1: "Supriya",
     rollno: 1,
