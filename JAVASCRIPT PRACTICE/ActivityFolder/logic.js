@@ -1,7 +1,7 @@
 
-// export function avg(a,b,c,d,e){
-//     return (a+b+c+d+e)/5;
-// }
+export function avg(a,b,c,d,e){
+    return (a+b+c+d+e)/5;
+}
 
 // export function max(arr){
 //     let max = arr[0];
