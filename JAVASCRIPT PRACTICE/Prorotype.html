@@ -7,13 +7,15 @@
 </head>
 <body>
     <!--Prototype - an object from which other object inherits properties and method -->
-
+    <!-- proto - property of an object -->
     <script>
         let student1 = {
             name: "Supriya",
             age: 20
         }
+        let student2 = Object.create(student1); //let student2 ={..proto...student1}
         console.log(student1);
+        console.log(student2);
     </script>
 </body>
 </html>
