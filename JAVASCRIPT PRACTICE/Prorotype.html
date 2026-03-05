@@ -16,6 +16,26 @@
         let student2 = Object.create(student1); //let student2 ={..proto...student1}
         console.log(student1);
         console.log(student2);
+
+        let first = {
+    a1: "I am in first object"
+}
+
+let second = {
+    a2: "I am in second object",
+    __proto__: first
+}
+
+let third = {
+    a3: "I am in third object",
+    __proto__: first
+}
+
+
+        console.log(first);
+        console.log(second);
+        console.log(third);
+        console.log(first.__proto__);
     </script>
 </body>
 </html>
