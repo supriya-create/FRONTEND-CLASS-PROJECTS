@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x = 10;
+        // function myfunc(){
+        //     if(true){
+        //         var z =70;
+        //     }
+        // }
+
+        //child->parent->grandparent->global
+        // reverse is not possible
+
+        function outer(){
+            let a = 10;
+
+            function inner(){
+                let b = 90;
+
+                function inner1(){
+                    let b =30;
+                    console.log(a, b)
+                }
+                inner1();
+            }
+            inner();
+        }
+        outer();
+        
+    </script>
+</body>
+</html>
