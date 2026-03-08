@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(232, 228, 228);
+    }
+    .main{
+        background-color: white;
+        border: solid black 1px;
+        border-radius: 10px;
+        margin: 30px;
+        padding: 50px;
+    }
+    .main h1{
+        text-align: center;
+    }
+    .mid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    } 
+    .card{
+        border: solid grey 1px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(192, 191, 191);
+    }
+</style>
+<body>
+    <div class="main">
+        <h1>Fitness Tips for a Healthy Life</h1>
+        <div class="mid">
+        <div class="card">
+            <h2>1.Stay Hydrated</h2>
+            <p>Drinking enough water is essential for energy and overall health.</p>
+        </div>
+        <div class="card">
+            <h2>2.Exercise Regularly</h2>
+            <p>Incorporate both cardio and strength traininig into your routine.</p>
+        </div>
+        <div class="card">
+            <h2>3.Eat a Balanced Diet</h2>
+            <p>Include a variety of fruits, vegetable and protein sources.</p>
+        </div>
+        </div>
+        <br><br>
+        <img src="imageeee.jpeg">
+
+        <h3>Quick Tips: </h3>
+        <ul>
+            <li>Get at least 7-8 hours sleep daily</li>
+            <li>Take short breaks to strech during work</li>
+            <li>Maintain good posture to prevent back pain</li>
+            <li>Manage stress through meditation or deep breathing</li>
+        </ul>
+
+        <button onclick="largest()">Largest Number</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function largest(){
+            let arr = [1,2,3,4,5];
+            let max = arr[0];
+            for(let i=0;i<5;i++){
+                if(arr[i]>max){
+                    max=arr[i];
+                }
+            }
+            document.getElementById("result").innerText=max;
+        }
+    </script>
+</body>
+</html>
