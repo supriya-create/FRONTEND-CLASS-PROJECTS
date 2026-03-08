@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+    .body{
+        margin: 0;
+    }
+    .head{
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .head h1{
+        margin: 0;
+    }
+    .head p{
+        margin-top:10px;
+        font-size: 14px;
+    }
+    .mid{
+        background-color: rgb(158, 244, 215);
+        padding: 50px 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    .box{
+        background-color: aliceblue;
+        border: solid black 4px;
+        padding: 30px;
+    }
+    .box h1{
+        text-align: center;
+    }
+    .box p{
+        margin-top: 15px;
+    }
+    .box a{
+        display: block;
+        margin-top: 15px;
+    }
+    .footer{
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 50px;
+    }
+    .footer button{
+        border-radius: 10px;
+        padding: 10px 25px;
+    }
+</style>
+<body>
+    <div class="head">
+        <h1>Education Resource</h1>
+        <p>Explore top resources to your learning experiences</p>
+    </div>
+    <div class="mid">
+        <div class="box">
+            <h1>Online Courses</h1>
+            <p>Discover the best online platform offering course across various domain.</p>
+            <p><a href="">Learn More</a></p>
+        </div>
+        <div class="box">
+            <h1>E-book And Article</h1>
+            <p>Access a valid collection of e-book and article on different subjects.</p>
+            <p><a href="">Explore</a></p>
+        </div>
+        <div class="box">
+            <h1>Coding Platform</h1>
+            <p>Practice coding and enhance your programming skills with interactive platfrom.</p>
+            <p><a href="">Start Coding</a></p>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>Join Our Learning Community</h2>
+        <p>Stay Updated with the latest educational resources and tool.</p>
+        <button>Subscribe</button>
+    </div>
+</body>
+</html>
