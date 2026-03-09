@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+    }
+    .container{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        gap: 20px;
+    }
+    .right{
+        background-color: grey;
+        border: solid 1px black;
+        height: 100vh;
+        border-radius: 4px;
+        width: 50%;
+        flex: 1;
+        padding: 20px;
+    }
+    .left{
+        background-color: grey;
+        width: 50%;
+        height: 100vh;
+        border: 1px solid black;
+        border-radius: 4px;
+        flex: 1;
+        padding: 20px;
+    }
+    .left p{
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: aliceblue;
+        height: 30px;
+        padding: 5px;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="right">
+            <h1>Delicious Pasta Recipe</h1>
+            <p>Follow this simple recipe to make a delicious homemade pasta dish.</p>
+            <img src="image.jpg" height="200px" width="200px">
+            <br><br>
+            <h2>Instructions</h2>
+            <ol type="1">
+                <li>Boil water and add salt.</li>
+                <li>Add pasta and cook until al dente.</li>
+                <li>Prepare the sauce with tomatoes and herbs.</li>
+                <li>Mix pasta with sauce and serve hot.</li>
+            </ol>
+        </div>
+        <div class="left">
+            <h2>Ingredients</h2>
+            <p>✔️ 200g Pasta</p>
+            <p>✔️ 2 Tomatoes</p>
+            <p>✔️ 1 tsp Olive Oil</p>
+            <p>✔️ Salt & Pepper</p>
+
+            <button class="btn" onclick="discount()">Discount</button>
+        </div>
+    </div>
+    <script>
+        let price=100;
+        let disc=10;
+        function discount(){
+            let final = price-(price*disc/100);
+            alert('Disconuted price: '+final);
+        }
+        </script>
+</body>
+</html>
