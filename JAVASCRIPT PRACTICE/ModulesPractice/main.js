@@ -1,5 +1,3 @@
-
-
 import {addition, PI} from "./calculation.js";
 import info from "./information.js";    //when default is used no need of {}
 import { addition as ad, PI as P } from "./calculation.js";   //rename when default is not present
