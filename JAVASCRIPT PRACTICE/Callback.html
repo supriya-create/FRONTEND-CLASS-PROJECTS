@@ -6,6 +6,31 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="head1">Heading 1</h1>
+     <h1 id="head2">Heading 2</h1>
+      <h1 id="head3">Heading 3</h1>
+      <button id="btn1">Change Color</button>
     
+    <script>
+        
+        let elt = document.getElementById("btn1");
+
+        elt.addEventListener("click",()=>{
+
+            setTimeout(()=>{
+                document.getElementById("head1").style.color="red";
+
+                setTimeout(()=>{
+                    document.getElementById("head2").style.color="green";
+
+
+                        setTimeout(()=>{
+                            document.getElementById("head3").style.color="blue";
+
+                        },9000)
+                },7000)
+            },3000)
+        })
+        </script>
 </body>
 </html>
