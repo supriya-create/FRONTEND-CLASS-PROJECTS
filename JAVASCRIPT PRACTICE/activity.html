@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="status">Placing Order</h1>
+    <button id="btn"> Order</button>
+
+    <script>
+        let status = document.getElementById("status");
+        let btn1 = document.getElementById("btn");
+
+        btn1.addEventListener("click", ()=>{
+            updateStatus("Order Placed", 1000)
+            .then(()=>{
+                return updateStatus("Order Packed", 3000);
+            })
+            .then(()=>{
+                return updateStatus("Ordetr out for delievery", 5000);
+            })
+            .then(()=>{
+                return updateStatus("Order arriving", 7000);
+            })
+            .then(()=>{
+                return updateStatus("Order Delievered", 10000);
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        })
+
+        function updateStatus(message, time){
+            return new Promise((resolve, reject)=>{
+                if(status){
+                    setTimeout(()=>{
+                        status.innerText = message;
+                        resolve();
+                    }, time)
+                }
+                else{
+                    reject("Status element not found");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
