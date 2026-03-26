@@ -17,14 +17,15 @@
         let heading3 = document.getElementById("head3");
         let button1 = document.getElementById("btn");
 
-        button1.addEventListener("click", ()=>{
-            changeColor(heading1, "green", 1000)
-            .then(()=>{
-                return changeColor(heading2, "orange", 3000);
-            })
-            .then(()=>{
-                return changeColor(heading3, "red", 4000);
-            })
+        button1.addEventListener("click", async ()=>{
+            try{
+            await changeColor(heading1, "yellow", 1000);
+            await changeColor(heading2, "red", 2000);
+            await changeColor(heading3, "green", 3000);
+            }
+            catch{
+                console.log(err);
+            }
         })
 
         function changeColor(element, color1, time){
