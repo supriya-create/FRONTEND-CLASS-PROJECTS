@@ -6,29 +6,62 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="head1">heading 1</h1>
+    <h2 id="head2">heading 2</h2>
+    <h3 id="head3">heading 3</h3>
+    <button id="btn">Change</button>
     
     <script>
-        //Promise is an object which can be created with the help of promise constructor
-        //States - Pending, fullfilled, rejected
+        let heading1 = document.getElementById("head1");
+        let heading2 = document.getElementById("head2");
+        let heading3 = document.getElementById("head3");
+        let button1 = document.getElementById("btn");
 
-        let promise = new Promise((resolve,reject)=>{
-            let randomNum = Math.random();
-            if(randomNum>0.5){
-                resolve(randomNum);
-            }
-            else{
-                reject(new Error("The number is less than 0.5"));
-            }
-        });
-        promise.then((num)=>{
-            console.log("The random number is: ",num);
+        button1.addEventListener("click", ()=>{
+            changeColor(heading1, "green", 1000)
+            .then(()=>{
+                return changeColor(heading2, "orange", 3000);
+            })
+            .then(()=>{
+                return changeColor(heading3, "red", 4000);
+            })
         })
-        .catch(()=>{
-            console.log(err.message);
-        })
-        .finally(()=>{
-            console.log("Task completed");
-        })
+
+        function changeColor(element, color1, time){
+            return new Promise ((resolve, reject)=>{
+                if(element){
+                    setTimeout(()=>{
+                        element.style.color = color1;
+                        resolve();
+                    }, time);
+                }
+                else{
+                    reject(new Error("The element doesn't exist"));
+                }
+            })
+        }
+
+        // //Promise is an object which can be created with the help of promise constructor
+        // //States - Pending, fullfilled, rejected
+
+        // let promise = new Promise((resolve,reject)=>{
+        //     let randomNum = Math.random();
+        //     if(randomNum>0.5){
+        //         resolve(randomNum);
+        //     }
+        //     else{
+        //         reject(new Error("The number is less than 0.5"));
+        //     }
+        // });
+        // promise.then((num)=>{
+        //     console.log("The random number is: ",num);
+        // })
+        // .catch(()=>{
+        //     console.log(err.message);
+        // })
+        // .finally(()=>{
+        //     console.log("Task completed");
+        // })
     </script>
 </body>
 </html>
