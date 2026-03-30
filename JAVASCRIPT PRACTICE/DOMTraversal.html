@@ -18,25 +18,40 @@
             <li>Item3</li>
         </ul>
     </div>
-
+    <div id="box2">
+        Hello
+        <h2 style="display: none;">this is new class</h2>
+    </div>
     <script>
         //type of html collection - array
+        let b1 = document.getElementById("box2");
+        console.log(b1.innerHTML);
+        console.log(b1.innerText);
+        console.log(b1.textContent);
         
         let para1 = document.getElementById("para1");
         console.log(para1.parentElement);
         console.log(para1.previousElementSibling);
         console.log(para1.nextElementSibling);
-
+        console.log(para1.firstChild);  //works on node list
+        console.log(para1.lastChild);
 
         let ul = document.getElementById("list1");
         console.log(ul.parentElement);
     
 
         let box1 = document.getElementById("box");
-        console.log(box1.firstElementChild);
+        console.log(box1.firstElementChild); //works on element list
         console.log(box1.lastElementChild);
         console.log(box1.children);   //only elements -> only tags
         console.log(box1.childNodes); //text Nodes, elements, comments
+
+
+        para1.addEventListener("click", function() {
+            para1.nextElementSibling.style.color = "green";;
+        });
+        //innerText - show text that are visible 
+        //textcontent - show text which is hidden and visible 
     </script>
 </body>
 </html>
