@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <!-- or -->
+        <h1 id="head1">This is heading1 inside div</h1>
+        <h2 id="head2">This is heading1 inside div</h2>
+        <p id="para1">This is para1 inside div</p>
+        <p id="para2">This is para2 inside div</p>
+        <ul id="list1">
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+        </ul>
+    </div>
+
+    <script>
+        //type of html collection - array
+        
+        let para1 = document.getElementById("para1");
+        console.log(para1.parentElement);
+        console.log(para1.previousElementSibling);
+        console.log(para1.nextElementSibling);
+
+
+        let ul = document.getElementById("list1");
+        console.log(ul.parentElement);
+    
+
+        let box1 = document.getElementById("box");
+        console.log(box1.firstElementChild);
+        console.log(box1.lastElementChild);
+        console.log(box1.children);   //only elements -> only tags
+        console.log(box1.childNodes); //text Nodes, elements, comments
+    </script>
+</body>
+</html>
