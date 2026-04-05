@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+    <div id="gp">
+    <div id="parent">
+        <button id="child">
+            Click!!!!
+        </button>
+    </div>
+    </div>
+    <script>
+
+         document.getElementById("parent").addEventListener("click",(event)=>{
+            alert("Div Parent Clicked");
+        },true)
+         document.getElementById("child").addEventListener("click",(event)=>{
+            alert("Button Clicked");
+        },true)
+        document.getElementById("gp").addEventListener("click",()=>{
+            alert("Grand Parent Clicked");
+        },true)
+        // document.getElementById("parent").addEventListener("click",(event)=>{
+        //     event.stopPropagation();
+        //     alert("Div Parent Clicked");
+        // })
+        //  document.getElementById("child").addEventListener("click",(event)=>{
+        //     event.stopPropagation();
+        //     alert("Button Clicked");
+        // })
+        // document.getElementById("gp").addEventListener("click",()=>{
+        //     alert("Grand Parent Clicked");
+        // })
+        
+    </script>
+</body>
+</html>
