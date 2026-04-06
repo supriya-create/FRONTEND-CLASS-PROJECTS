@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation & Events Demo</title>
+</head>
+
+<body style="margin:0; font-family: Arial; background:#eaeaf0;">
+
+  <div style="width:400px; margin:40px auto; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+
+    <h2 style="text-align:center;">DOM Manipulation & Events Demo</h2>
+    <p style="text-align:center; font-size:12px; color:gray;">
+      Interactive webpage using JavaScript events and real-time updates
+    </p>
+
+    <!-- Name Input -->
+    <h4>1. Type Your Name</h4>
+    <input type="text" id="nameInput" placeholder="Enter name"
+      style="width:100%; padding:8px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;"
+      onkeyup="updateName()">
+
+    <div id="output" style="background:#f1f1f1; padding:10px; border-radius:5px;">
+      Hello, <span id="displayName">----</span><br>
+      Character Count: <span id="count">0</span>
+    </div>
+
+    <hr>
+
+    <!-- Theme -->
+    <h4>2. Choose a Theme Accent</h4>
+    <select id="colorSelect"
+      style="width:100%; padding:8px; border-radius:5px;"
+      onchange="changeTheme()">
+      <option value="purple">Purple</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+
+    <div style="margin-top:10px;">
+      <button onclick="toggleMode()" 
+        style="padding:8px 15px; background:purple; color:white; border:none; border-radius:5px;">
+        Toggle Dark Mode
+      </button>
+
+      <button onclick="showMessage()" 
+        style="padding:8px 15px; background:purple; color:white; border:none; border-radius:5px;">
+        Surprise Message
+      </button>
+    </div>
+
+    <p id="message" style="margin-top:10px; color:gray;">
+      Events make web pages interactive and powerful!
+    </p>
+
+    <hr>
+
+    <!-- Task Section -->
+    <h4>3. Add a Task</h4>
+    <input type="text" id="taskInput" placeholder="Enter task"
+      style="width:70%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+
+    <button onclick="addTask()"
+      style="padding:8px; background:purple; color:white; border:none; border-radius:5px;">
+      Add Task
+    </button>
+
+    <ul id="taskList" style="list-style:none; padding:0;"></ul>
+
+  </div>
+
+  <script>
+    function updateName() {
+      let name = document.getElementById("nameInput").value;
+      document.getElementById("displayName").innerText = name || "----";
+      document.getElementById("count").innerText = name.length;
+    }
+
+    function changeTheme() {
+      let color = document.getElementById("colorSelect").value;
+      let buttons = document.querySelectorAll("button");
+
+      buttons.forEach(btn => {
+        btn.style.background = color;
+      });
+    }
+
+    function toggleMode() {
+      if (document.body.style.background == "black") {
+        document.body.style.background = "#eaeaf0";
+        document.body.style.color = "black";
+      } else {
+        document.body.style.background = "black";
+        document.body.style.color = "white";
+      }
+    }
+
+    function showMessage() {
+      document.getElementById("message").innerText =
+        "🎉 Surprise! You triggered an event!";
+    }
+
+    function addTask() {
+      let task = document.getElementById("taskInput").value;
+      if (task == "") return;
+
+      let li = document.createElement("li");
+      li.style.margin = "10px 0";
+
+      li.innerHTML = task + 
+        ' <button onclick="this.parentElement.remove()" style="background:red; color:white; border:none; border-radius:5px; padding:5px;">Delete</button>';
+
+      document.getElementById("taskList").appendChild(li);
+
+      document.getElementById("taskInput").value = "";
+    }
+  </script>
+
+</body>
+</html>
