@@ -1,36 +1,61 @@
-<script>
-    function changeStyle(){
-        let elt = document.getElementById("p1");
-        elt.style.color="yellow";
-        elt.style.backgroundColor="black";
-        elt.style.fontStyle="italic";
-        elt.style.textAlign="center";
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass{
+            color: blue;
+            background-color: aquamarine;
+            text-align: center;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">This is front end class</p>
+    <button id="btn1" onclick="changeStyle()">Change Style</button>
 
-    function addClassStyle(){
-        document.getElementById("p2").classList.add("myclass");
-    }
+    <p id="p2">This is class style</p>
+    <button id="btn2" onclick="addClassStyle()">Add Class style</button>
+    <button id="btn2" onclick="removeClassStyle()">Remove Class style</button>
+    <button id="btn3" onclick="changeToggleStyle()">Change Toggle style</button>
 
-    function removeClassStyle(){
-        document.getElementById("p2").classList.remove("myclass");
-    }
+    <p id="p3">Event Listener</p>
+    <button id="btn4">Add EventListener</button>
+    <button id="btn5" onclick="removeListener()">Remove EventListener from btn4</button>
+    <script>
 
-    function changeToggleStyle(){
-        document.getElementById("p2").classList.toggle("myclass");
-    }
+        function addEvent(){
+            document.getElementById("p3").innerHTML=Math.random();
+        }
+        document.getElementById("btn4").addEventListener("click",addEvent);
 
-    function addEvent(){
-        document.getElementById("p3").innerHTML = Math.random();
-    }
+        function removeListener(){
+        document.getElementById("btn4").removeEventListener("click",addEvent);}
 
-    function removeEvent(){
-        document.getElementById("btn4").removeEventListener("click", addEvent);
-    }
+        function changeToggleStyle(){
+            document.getElementById("p2").classList.toggle("myclass");
+        }
 
-    // Add event to btn4
-    document.getElementById("btn4").addEventListener("click", addEvent);
+        function removeClassStyle(){
+            document.getElementById("p2").classList.remove("myclass");
+        }
 
-    // When btn5 is clicked → remove event from btn4
-    document.getElementById("btn5").addEventListener("click", removeEvent);
+        function addClassStyle(){
+            document.getElementById("p2").classList.add("myclass");
+        }
 
-</script>
+        function changeStyle(){
+            let elt = document.getElementById("p1");
+            elt.style.color="yellow";
+            elt.style.backgroundColor="black";
+            elt.style.fontStyle="italic";
+            elt.style.textAlign="center";
+        }
+    </script>
+</body>
+</html>
