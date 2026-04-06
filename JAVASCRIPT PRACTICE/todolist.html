@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .box {
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h3>Total Tasks: <span id="count">2</span></h3>
+
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button onclick="addTask()">Add</button>
+
+        <ul id="taskList">
+            <li>Assignment</li>
+            <li>Cooking</li>
+            <li>Cleaning</li>
+        </ul>
+    </div>
+
+    <script>
+        let taskList = document.getElementById("taskList");
+        let count = document.getElementById("count");
+
+        function updateCount() {
+            count.textContent = taskList.children.length;
+        }
+
+        function addTask() {
+            let input = document.getElementById("taskInput");
+            let task = input.value.trim();
+
+            if (task === "") return;
+
+            let li = document.createElement("li");
+            li.textContent = task;
+
+            taskList.appendChild(li);
+
+            input.value = "";
+            updateCount();
+        }
+
+        taskList.addEventListener("click", function(e) {
+            if (e.target.tagName === "LI") {
+                e.target.classList.toggle("active");
+            }
+        });
+
+        taskList.addEventListener("dblclick", function(e) {
+            if (e.target.tagName === "LI") {
+                e.target.remove();
+                updateCount();
+            }
+        });
+
+        updateCount();
+    </script>
+
+</body>
+</html>
