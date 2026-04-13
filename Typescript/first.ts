@@ -32,12 +32,3 @@ for(let i=0;i<arraystr.length;i++){
     console.log(i +" " + arraystr[i]);
 }
 
-function greet():void{
-    console.log("Front End");
-}
-greet();
-
-function add(a:number,b:number,c:number):number{
-    return a+b+c;
-}
-console.log(add(3,4,5));
