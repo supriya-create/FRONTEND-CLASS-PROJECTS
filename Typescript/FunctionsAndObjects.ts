@@ -77,3 +77,21 @@ let student:stuCombine={
     pin: 64001
 }
 console.log(student);
+
+
+type age = number;
+let personAge:age = 60;
+console.log(personAge);
+
+type name1 = string;
+let personName:name1 = "aman";
+console.log(personName);
+
+type status = "Success" | "Failure";
+const newStatus:status = "Success";
+console.log(newStatus);
+
+type grade = "A"|"B"|"C";
+let personGrade: grade = "A";
+console.log(personGrade);
+

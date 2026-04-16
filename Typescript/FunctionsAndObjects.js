@@ -29,4 +29,10 @@ let student = {
     pin: 64001
 };
 console.log(student);
+let personAge = 60;
+console.log(personAge);
+let personName = "aman";
+console.log(personName);
+const newStatus = "Success";
+console.log(newStatus);
 export {};
