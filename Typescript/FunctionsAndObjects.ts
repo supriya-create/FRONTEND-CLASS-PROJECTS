@@ -95,3 +95,17 @@ type grade = "A"|"B"|"C";
 let personGrade: grade = "A";
 console.log(personGrade);
 
+
+function updateStatus(n:string|number):string|number{
+    if(typeof n==="string"){
+        return n.toUpperCase();
+    }else if(typeof n === "number"){
+        return n*3;
+    }else{
+        return "Error";
+    }
+}
+console.log(updateStatus(5));
+
+
+

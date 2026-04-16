@@ -35,4 +35,18 @@ let personName = "aman";
 console.log(personName);
 const newStatus = "Success";
 console.log(newStatus);
+let personGrade = "A";
+console.log(personGrade);
+function updateStatus(n) {
+    if (typeof n === "string") {
+        return n.toUpperCase();
+    }
+    else if (typeof n === "number") {
+        return n * 3;
+    }
+    else {
+        return "Error";
+    }
+}
+console.log(updateStatus(5));
 export {};
