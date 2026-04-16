@@ -1,0 +1,33 @@
+//Interface
+//1)Interface creates structure only for objects
+//2)Extends, implements
+//3)Two same name interface can be created
+let laptopObject = {
+    lid: 1,
+    brand: "Dell",
+    color: "grey",
+    ram: "16",
+    ssd: "512GB"
+};
+console.log(laptopObject);
+class LaptopClass {
+    lid;
+    brand;
+    color;
+    //processor?:string
+    ram;
+    ssd;
+    constructor(lid, brand, color, ram, ssd) {
+        this.lid = lid;
+        this.brand = brand;
+        this.color = color;
+        this.ram = ram;
+        this.ssd = ssd;
+    }
+    info() {
+        console.log("I have a laptop of " + this.brand + " with model " + this.brand + " and colour " + this.color);
+    }
+}
+let u = new LaptopClass(1, "mac", "grey", "16GB", "512");
+u.info();
+export {};

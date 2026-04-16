@@ -49,4 +49,10 @@ function updateStatus(n) {
     }
 }
 console.log(updateStatus(5));
+let stuObject = {
+    name: "Supriya",
+    rollno: 15,
+    city: "Dbg",
+    state: "Bihar"
+};
 export {};

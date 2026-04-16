@@ -108,4 +108,21 @@ function updateStatus(n:string|number):string|number{
 console.log(updateStatus(5));
 
 
+interface stud{
+    name: string;
+    rollno : number;
+}
 
+interface stud{
+    city: string;
+    state: string;
+}
+
+interface studCombine extends stud{}
+
+let stuObject:studCombine={
+    name:"Supriya",
+    rollno:15,
+    city:"Dbg",
+    state:"Bihar"
+}
