@@ -23,3 +23,10 @@ function getValue<T>(arr:T[], index:number):T{
 }
 console.log(getValue([1,2,3,4,5], 2));
 
+interface Demo<T>{
+    value:T;
+}
+let a: Demo<string> = {
+    value:"Supriya"
+};
+
