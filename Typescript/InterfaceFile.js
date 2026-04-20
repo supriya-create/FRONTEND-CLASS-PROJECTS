@@ -2,6 +2,11 @@
 //1)Interface creates structure only for objects
 //2)Extends, implements
 //3)Two same name interface can be created
+//Type
+//1)Type creates structure for objects, primitive and literals
+//2)Union, Intersection
+//3)Two same types can not be merged 
+export {};
 let laptopObject = {
     lid: 1,
     brand: "Dell",
@@ -30,4 +35,4 @@ class LaptopClass {
 }
 let u = new LaptopClass(1, "mac", "grey", "16GB", "512");
 u.info();
-export {};
+//# sourceMappingURL=InterfaceFile.js.map

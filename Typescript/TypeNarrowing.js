@@ -1,4 +1,3 @@
-"use strict";
 //type narrowing means reducing a broad type into a more specific type based on condition
 //type of narrowing
 //1)typeof narrowing
@@ -41,3 +40,29 @@ function takeNullValue(val) {
     }
 }
 takeNullValue("");
+function checkType(o) {
+    if ("read" in o) {
+        o.read();
+    }
+    else {
+        o.play();
+    }
+}
+let r1 = {
+    read() {
+        return "I am reading a journal";
+    }
+};
+let p1 = {
+    play() {
+        return "I am playing chess";
+    }
+};
+console.log(p1);
+export {};
+//tsconfig.json - where all dependencies are stored
+//1)How to create
+// tsc --init
+// tsc - this will compile all the files together
+// tsc --watch: will see the changes automatically that you will make to your code
+//# sourceMappingURL=TypeNarrowing.js.map

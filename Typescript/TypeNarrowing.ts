@@ -43,3 +43,36 @@ function takeNullValue(val:string|null){
     }
 }
 takeNullValue("");
+
+//4)toOperator Narrowing
+type Reading1={
+    read():string
+}
+type Playing1={
+    play():void
+}
+function checkType(o:Reading1|Playing1){
+    if("read" in o){
+        o.read();
+    }else{
+        o.play();
+    }
+}
+let r1:Reading1={
+    read(){
+        return "I am reading a journal";
+    }
+}
+let p1:Playing1={
+    play() {
+        return "I am playing chess";   
+    }
+}
+console.log(p1);
+
+
+//tsconfig.json - where all dependencies are stored
+//1)How to create
+// tsc --init
+// tsc - this will compile all the files together
+// tsc --watch: will see the changes automatically that you will make to your code

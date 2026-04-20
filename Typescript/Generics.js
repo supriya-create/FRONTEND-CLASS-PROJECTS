@@ -1,3 +1,4 @@
+export {};
 function takeValue(val) {
     return val;
 }
@@ -17,4 +18,7 @@ function getValue(arr, index) {
     return arr[index];
 }
 console.log(getValue([1, 2, 3, 4, 5], 2));
-export {};
+let a = {
+    value: "Supriya"
+};
+//# sourceMappingURL=Generics.js.map

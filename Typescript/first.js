@@ -1,3 +1,4 @@
+export {};
 let age = 70;
 console.log(age);
 let name1 = "Raj";
@@ -21,12 +22,4 @@ console.log(arraystr1);
 for (let i = 0; i < arraystr.length; i++) {
     console.log(i + " " + arraystr[i]);
 }
-function greet() {
-    console.log("Front End");
-}
-greet();
-function add(a, b, c) {
-    return a + b + c;
-}
-console.log(add(3, 4, 5));
-export {};
+//# sourceMappingURL=first.js.map

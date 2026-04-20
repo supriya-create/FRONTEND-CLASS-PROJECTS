@@ -18,7 +18,7 @@ function pairValue<T,Y>(a:T, b:Y):[T,Y]{
 console.log(pairValue(1, "hello"));
 console.log(pairValue("hello", 10));
 
-function getValue<T>(arr:T[], index:number):T{
+function getValue<T>(arr:T[], index:number):T|undefined{
     return arr[index];
 }
 console.log(getValue([1,2,3,4,5], 2));

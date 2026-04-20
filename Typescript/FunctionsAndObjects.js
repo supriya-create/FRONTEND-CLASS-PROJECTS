@@ -1,3 +1,4 @@
+export {};
 function greet() {
     console.log("Front End");
 }
@@ -55,4 +56,4 @@ let stuObject = {
     city: "Dbg",
     state: "Bihar"
 };
-export {};
+//# sourceMappingURL=FunctionsAndObjects.js.map
