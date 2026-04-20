@@ -3,8 +3,8 @@
 //2)Extends, implements
 //3)Two same name interface can be created
 
-//Typescript
-//1)Type creates structure only for objects.
+//Type
+//1)Type creates structure for objects, primitive and literals
 //2)Union, Intersection
 //3)Two same types can not be merged 
 export{}
@@ -54,3 +54,5 @@ class LaptopClass implements LaptopCombine{
 
 let u = new LaptopClass(1, "mac", "grey", "16GB", "512");
 u.info();
+
+
