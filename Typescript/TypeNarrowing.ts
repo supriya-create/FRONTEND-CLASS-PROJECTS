@@ -76,3 +76,7 @@ console.log(p1);
 // tsc --init
 // tsc - this will compile all the files together
 // tsc --watch: will see the changes automatically that you will make to your code
+
+
+//data model - defines how data should look in an application
+//1) 
