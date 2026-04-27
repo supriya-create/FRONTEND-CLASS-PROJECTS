@@ -15,3 +15,9 @@ function order(p:PizzaOrder){
     console.log(`I have ordered a pizza of size ${p.size} and price ${p.price}`);
 }
 order({size: "Large", price: 15.99});
+
+
+//testing fundamentals
+// jest - testing tool for typescript
+
+

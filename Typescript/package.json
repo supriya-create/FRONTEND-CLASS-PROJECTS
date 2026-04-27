@@ -1,0 +1,19 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "FunctionsAndObjects.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "types": "./FunctionsAndObjects.d.ts",
+  "description": "",
+  "dependencies": {
+    "-": "^0.0.1",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.9"
+  }
+}
