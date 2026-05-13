@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Weather Dashboard</h2>
+    <select id="city">
+        <option value="">Select City</option>
+        <option value="London">London</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+    </select>
+    <button id="btn">Get Weather</button>
+    <h3 id="loading"></h3>
+    <div id="weather"></div>
+    <p id="time"></p>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const citySelect = document.getElementById("city");
+
+        const weather = document.getElementById("weather");
+        const loading = document.getElementById("loading");
+        const time = document.getElementById("");
+
+        function startTimer(){
+            function updateTime(){
+                time.innerText = "Last Updated: "+new Date().toLocaleTimeString();
+                setTimeout(updateTime, 30000);
+            }
+            updateTime();
+        }
+        startTimer();
+
+
+        async function getWeather(city){
+            try{
+                loading.innerText = "Loading...";
+                weather.innerText = "";
+
+                let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY&units=metric`);
+                if(!response.ok){
+                    throw new Error("Inavalid City");
+                }
+
+                let data = await response.json();
+
+                weather.innerHTML = `<h3>${data.name}</h3> <p>Temperature: ${data.main.temp} °C</p> <p>Weather: ${data.weather[0].main}</p>`;
+                loading.innerText = "";
+            }catch(error){
+                loading.innerHTML = "";
+                weather.innerHTML = `<p>${error.message}</p>`;
+            }
+        }
+
+        btn.addEventListener("click", ()=>{
+            let city = citySelect.value;
+
+            if(city === ""){
+                weather.innerHTML = "<p>Please select a city</p>";
+                return;
+            }
+
+            getWeather(city);
+        });
+
+    </script>
+</body>
+</html>
